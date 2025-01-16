@@ -1,0 +1,295 @@
+/* Main container for menus */
+.menus {
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 120px;
+}
+
+/* Heading style */
+.menus h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Layout for content and video */
+.menu-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* To handle responsiveness */
+}
+
+/* Content on the left */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: Jost, sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.content p {
+    font-size: 1.4rem;
+    color: #ddd;
+    /* Light text color for better contrast */
+    line-height: 1.6;
+    font-family: Forum, sans-serif;
+    text-align: left;
+
+}
+
+.content h2 {
+    font-family: 'Rightman Signature', sans-serif;
+    color: #ff9100;
+    font-weight: 700;
+    font-size: 3.7rem;
+    text-align: left;
+    margin: 0 auto;
+    letter-spacing: 5px;
+
+}
+
+/* Video on the right */
+.video-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10% 10% 0 0;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main container */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    color: #ffffff;
+    /* background-color: #01241a ; */
+  }
+  
+  /* Individual sections */
+  .menu-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Section Heading */
+  .menu-section h2 {
+    font-family: 'Forum', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9100;
+    text-align: center;
+  }
+  
+  /* Menu list */
+  .menu-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-section li {
+    margin-bottom: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: Jost, sans-serif;
+  }
+  
+  .menu-section p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.5;
+    margin-top: 5px;
+  }
+  /* content-overlay */
+  .fixed-bg-section {
+    position: relative;
+    /* background-image: url('/assets/bg-img.jpg');  */
+    
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    background-attachment: fixed;
+    
+    
+  }
+  .fixed-bg-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-size: cover;
+    background-position: center;
+     /* This makes the background fixed */
+    filter: brightness(0.5); /* Apply brightness filter only to background image */
+    z-index: -1; /* Ensure the background stays behind the content */
+  }
+  
+  /* Overlay content */
+  .content-overlay {
+    
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 780px;
+  }
+  
+  .content-overlay h1 {
+    font-size: 5.6rem;
+    font-family: Forum, sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff; 
+  }
+  /* content-overlay */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        margin-bottom: 20px;
+    }
+
+    .video-container video {
+        max-width: 100%;
+    }
+    .menu-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .menu-section {
+        padding: 10px;
+      }
+    
+      .menu-section h2 {
+        font-size: 2rem;
+      }
+    
+      .menu-item {
+        font-size: 1.2rem;
+      }
+    
+      .menu-section p {
+        font-size: 0.9rem;
+      }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-layout {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+        /* Adjust heading size */
+    }
+
+    .content p {
+        font-size: 1.2rem;
+        /* Adjust paragraph size */
+    }
+
+    .video-container video {
+        max-width: 400px;
+        /* Slightly smaller video for tablets */
+    }
+}
+
+/* Screens between 1025px and 1920px (Desktops and larger) */
+@media (min-width: 1025px) {
+    .menu-layout {
+        gap: 30px;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+        /* Larger heading size */
+    }
+
+    .content p {
+        font-size: 1.4rem;
+        /* Larger paragraph size */
+    }
+
+    .video-container video {
+        max-width: 600px;
+        /* Larger video for desktops */
+    }
+    .menu-section {
+        padding: 30px;
+      }
+    
+      .menu-section h2 {
+        font-size: 3rem;
+      }
+    
+      .menu-item {
+        font-size: 1.7rem;
+      }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.8rem;
+        /* Smaller heading for extra small screens */
+    }
+    .content-overlay h1{
+        font-size: 4.4rem;
+    }
+    .menu-section p{
+        text-align: left;
+    }
+    .content p {
+        font-size: 1.2rem;
+        /* Smaller paragraph text */
+    }
+
+    .content h2 {
+        font-size: 2.9rem;
+        /* Reduce size of h2 for better fit */
+        letter-spacing: 3px;
+        /* Adjust letter spacing */
+    }
+
+    .video-container video {
+        border-radius: 5%;
+        /* Adjust border radius for smaller screens */
+    }
+}

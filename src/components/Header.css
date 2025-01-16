@@ -1,0 +1,125 @@
+/* Top Section */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 68px;
+  background-color: #0e392d;
+  color: #e2e1e1;
+  font-family: Jost, sans-serif;
+  position: relative;
+  z-index: 8000;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.top.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b4d39;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 0 auto;
+  max-width: 1300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 40px; /* Default top position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9000;
+  width: calc(100% - 40px);
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  top: 0;
+  background-color: #0e392d; /* Darker color after scrolling */
+}
+
+/* Navbar Logo */
+.navbar-logo img {
+  width: 161px;
+  height: 55px;
+  object-fit: cover;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: Jost, sans-serif;
+}
+
+.navbar-menu li a:hover {
+  color: #ff9100;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    margin-right: 10px;
+  }
+  .top{
+    display: none;
+  }
+  .navbar{
+    top: 9px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+  .navbar-menu li a{
+    color: #000;
+  }
+  .navbar-menu li {
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+    width: 80%;
+    background-color: #ffffff;
+  }
+}

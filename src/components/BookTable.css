@@ -1,0 +1,231 @@
+.table-booking-container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 126px auto 0;
+}
+
+.table-booking-container h1 {
+  font-size: 3.3rem;
+  font-family: Jost, sans-serif;
+  font-weight: 700;
+  color: #ff9100;
+  margin: 0 auto;
+}
+
+.table-booking-container p {
+  font-family: Forum, sans-serif;
+  font-size: 1.7rem;
+  margin: 40px 0px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.table-booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-row input,
+.input-row select {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Jost, sans-serif;
+}
+
+.submit-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: rgb(26, 25, 25);
+  border: none;
+  font-family: Jost, sans-serif;
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 60px 0px;
+}
+
+.submit-button:hover {
+  background-color: #c5c4c4;
+}
+/* BookTable.css */
+
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white; /* Default background color */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Apply styles when the select dropdown is focused */
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #f0f8ff; /* Light blue background on focus */
+}
+
+/* Style the selected option */
+select option {
+  background-color: #ff9100;
+  color: #333;
+  padding: 10px;
+  font-family: Jost, sans-serif;
+  text-align: left;
+}
+
+/* Apply custom styles when a user selects an option */
+select option:checked {
+  background-color: #ffffff; /* Blue background for selected option */
+  color: #000;
+}
+
+/* Optional: Add hover effect for options */
+select option:hover {
+  background-color: #f0f8ff; /* Light blue background on hover */
+}
+/* image-gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-left: 63px;
+  margin-right: 63px;
+  margin-bottom: 50px;
+}
+
+.image-container1 {
+  position: relative;
+  width: 23%;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  transition: brightness 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container1:hover .gallery-image {
+  filter: brightness(0.5);
+}
+
+.image-container1:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay h4, .image-overlay h3 {
+  margin: 5px 0;
+}
+
+.image-overlay a {
+  color: #ff9100;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.image-overlay a:hover {
+  text-decoration: underline;
+}
+.image-container1:nth-child(1) {
+  margin-top: 25px; /* Pehli image ko niche le jane ke liye */
+}
+
+.image-container1:nth-child(2) {
+  margin-bottom: 25px; /* Dusri image ko upar le jane ke liye */
+}
+.image-container1:nth-child(3) {
+  margin-top: 25px; /* Dusri image ko upar le jane ke liye */
+}
+.image-container1:nth-child(4) {
+  margin-bottom: 25px; /* Dusri image ko upar le jane ke liye */
+}
+
+/* image-gallery */
+/* Responsive css  */
+@media (max-width: 1200px) {
+  .image-container1 {
+    width: calc(33.33% - 10px);
+  }
+
+  .table-booking-container h1 {
+    font-size: 2rem;
+  }
+
+  .table-booking-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container1 {
+    width: calc(50% - 10px);
+  }
+
+  .table-booking-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container1 {
+    width: 100%;
+  }
+
+  .table-booking-container h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0px 30px;
+
+  }
+
+  .table-booking-container p {
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 0px 30px;
+  }
+
+  .input-row input,
+  .input-row select {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+ .input-row{
+  width: 80%;
+  display: block;
+ }
+  .submit-button {
+    width: 57%;
+  }
+}
+/* Responsive css  */
