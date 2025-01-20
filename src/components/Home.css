@@ -423,6 +423,9 @@
 
 
 /* testimonail css start here  */
+.testimonial-card{
+  height: 300px;
+}
 .testimonial-slider {
   max-width: 1200px;
   margin: 0 auto;
